@@ -6,4 +6,6 @@
   void volumenCubo();
   void volumenCilindro();
   void volumenEsfera();
+  void potencia();
+  void raizCuadrada();
 #endif

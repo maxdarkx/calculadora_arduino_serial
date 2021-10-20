@@ -34,7 +34,7 @@ void suma()
   //print the solution on screen (SERIAL and LCD)
   writeString("\nEl resultado es: \n");
 
-  temp = String(sum1) + " + " + String(sum2) + " = " + String(resultado)+"\n\n"; 
+  temp = String(sum1,2) + " + " + String(sum2,2) + " = " + String(resultado,2)+"\n\n"; 
   writeString(temp);
   writeAnswerToLCD(temp);
 }
@@ -63,7 +63,7 @@ void resta()
 
   writeString("\nEl resultado es: \n");
 
-  temp = String(res1) + " - " + String(res2) + " = " + String(resultado)+"\n\n";
+  temp = String(res1,2) + " - " + String(res2,2) + " = " + String(resultado,2)+"\n\n";
   writeString(temp);
   writeAnswerToLCD(temp);
 }
@@ -132,7 +132,7 @@ void division()
   {
     temp = "\nLa division por cero no esta permitida\n\n";
     writeString(temp);
-    temp = "Division por cero";
+    temp = "Division cero";
     writeStringToLCD(temp);
   }
 }

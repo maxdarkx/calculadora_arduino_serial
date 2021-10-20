@@ -140,3 +140,60 @@ void volumenEsfera()
   writeString(temp);
   writeAnswerToLCD(temp);
 }
+
+//function to calculare a base times exp
+//base == 0 and exp == 0 not allowed
+void potencia()
+{
+  float base;
+  float exponente;
+  float resultado;
+  String temp = "";
+
+  writeString("\n\tPOTENCIA\n\n");
+  
+  writeString("Ingrese la base: \n");
+  base = readStr().toFloat();
+  writeString(String(base, 2) + "\n");
+
+  writeString("Ingrese el exponente: \n");
+  exponente = readStr().toFloat();
+  writeString(String(exponente, 2) + "\n");
+
+  if(base == 0 && exponente ==0)
+  {
+    temp = "\nExponente y base iguales a cero\n";
+    writeString(temp);
+    temp = "Exponente y base iguales a cero";
+    writeStringToLCD(temp);
+  }
+  else
+  {
+    resultado = pow(base,exponente);
+    
+    writeString("\nEl resultado es: \n");
+    temp = "Pot("+String(base)+" ^ "+String(exponente)+") = " + String(resultado,2) +"\n\n";
+    writeString(temp);
+    writeAnswerToLCD(temp);
+  }
+}
+
+//function to calculate a square root
+void raizCuadrada()
+{
+  float base;
+  float resultado;
+  String temp = "";
+
+  writeString("\n\tRAIZ CUADRADA\n\n");
+  writeString("Ingrese la base: \n");
+  base = readStr().toFloat();
+  writeString(String(base) + "\n");
+
+  resultado = sqrt(base);
+
+  writeString("\nEl resultado es: \n");
+  temp = "SQRT ("+String(base)+") = " + String(resultado,2) +"\n\n";
+  writeString(temp);
+  writeAnswerToLCD(temp);
+}

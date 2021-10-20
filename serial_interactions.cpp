@@ -12,7 +12,7 @@ String readStr()
   while(!Serial.available())
   {
     delay(100);
-    sleepNow();
+    //sleepNow();
   }
   return Serial.readString();
 }
