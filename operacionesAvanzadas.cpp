@@ -5,13 +5,13 @@
 
 void areaCuadrado()
 {
-  double lado;
-  double resultado;
+  float lado;
+  float resultado;
   String temp = "";
 
   writeString("\n\tAREA DEL CUADRADO\n\n");
   writeString("Ingrese el lado: \n");
-  lado = readStr().toDouble();
+  lado = readStr().toFloat();
   writeString(String(lado) + "\n");
 
   resultado = lado * lado;
@@ -24,8 +24,8 @@ void areaCuadrado()
 
 void areaCirculo()
 {
-  double radio;
-  double resultado;
+  float radio;
+  float resultado;
   String temp = "";  
   
   writeString("\n\tAREA DEL CIRCULO\n\n");
@@ -79,7 +79,7 @@ void volumenCubo()
   resultado = lado * lado * lado;
 
   writeString("\nEl resultado es: \n");
-  temp = "Area de Cubo = " + String(resultado,2) +"\n\n";
+  temp = "Vol de Cubo = " + String(resultado,2) +"\n\n";
   writeString(temp);
   writeAnswerToLCD(temp);
 }
@@ -126,10 +126,10 @@ void volumenEsfera()
   writeString(String(radio, 2) + "\n");
   
   resultado = radio * radio * radio * (4.0/3.0);
-  writeString(String(resultado,2));
+  //writeString(String(resultado,2));
   
   resultado = resultado * pi_val;
-  writeString(String(resultado,2));
+  //writeString(String(resultado,2));
 
   writeString("\nEl resultado es: \n");
   temp = "Vol Esfera = " + String(resultado,2) +"\n\n";

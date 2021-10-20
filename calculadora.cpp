@@ -2,10 +2,7 @@
 #include "serial_interactions.h"
 #include <LiquidCrystal.h>
 
-
-#ifndef LiquidCrystal lcd;
-#define LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-#endif
+extern LiquidCrystal lcd;
 
 void suma()
 {

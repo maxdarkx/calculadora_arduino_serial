@@ -1,27 +1,21 @@
 #include "serial_interactions.h"
+#include "powerSaver.h"
 #include "Arduino.h"
 #include <LiquidCrystal.h>
 
 extern LiquidCrystal lcd;
+
 
 String readStr()
 {
   while(!Serial.available())
   {
     delay(100);
+    sleepNow();
   }
   return Serial.readString();
 }
 
-String readStr2()
-{
-  //pido el dato por polling
-  while(!Serial.available())
-  {
-    delay(100);
-  }
-  return Serial.readString();
-}
 
 void writeString(String text)
 {
