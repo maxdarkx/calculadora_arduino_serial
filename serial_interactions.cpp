@@ -5,7 +5,8 @@
 
 extern LiquidCrystal lcd;
 
-
+//Read a String from the SERIAL PC connection. If no data is detected on buffer (serial.available()), puts the MCU
+// in low energy consumption mode until any data is received
 String readStr()
 {
   while(!Serial.available())
@@ -16,11 +17,13 @@ String readStr()
   return Serial.readString();
 }
 
-
+//write a string to the SERIAL connection
 void writeString(String text)
 {
   Serial.print(text);
 }
+
+//Writes a formatted answer String (two line string) to the LCD screen
 
 void writeAnswerToLCD(String text)
 {
@@ -43,6 +46,7 @@ void writeAnswerToLCD(String text)
   lcd.print(linea2);
 }
 
+//Writes a formatted String (two line string) to the LCD screen
 void writeStringToLCD(String text)
 {
   String linea1 = text.substring(0,16);

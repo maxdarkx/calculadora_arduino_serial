@@ -1,7 +1,7 @@
 #include <avr/power.h>
 #include <avr/sleep.h>
 
-
+//function to use the arduino under power saving modes (SERIAL makes only use of SLEEP_MODE_IDLE)
 void sleepNow()
 {
 /* Now is the time to set the sleep mode. In the Atmega8 datasheet
@@ -26,6 +26,8 @@ set_sleep_mode(SLEEP_MODE_IDLE); // sleep mode is set here
 
 sleep_enable(); // enables the sleep bit in the mcucr register
 // so sleep is possible. just a safety pin
+
+//Disable all MCU peripherals
 
 power_adc_disable();
 power_spi_disable();

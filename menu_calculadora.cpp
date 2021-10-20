@@ -1,6 +1,7 @@
 #include "serial_interactions.h"
 #include "operacionesAvanzadas.h"
 
+//print the main menu on screen (SERIAL ONLY) 
 String menu()
 {
   writeString("Menu Calculadora: \n");
@@ -19,6 +20,9 @@ String menu()
   return readStr();
 }
 
+//  print the area menu on screen (SERIAL ONLY) and 
+//  request for the required operation
+
 void menuCalcularAreas()
 {
   int opcion = 0;
@@ -27,6 +31,8 @@ void menuCalcularAreas()
   writeString("1) Cuadrado \n");
   writeString("2) Circulo \n");
   writeString("3) Rectangulo\n");
+  writeString("Presione cualquier otra tecla para regresar\n");
+  
   writeString("Escriba su opcion: \n");
   opcion = readStr().toInt();
   
@@ -37,14 +43,24 @@ void menuCalcularAreas()
     case 1:
       areaCuadrado();
     break;
+    
     case 2:
       areaCirculo();
     break;
+    
     case 3:
       areaRectangulo();
     break;
+    
+    default:
+      writeString("Regresa al menu principal \n");
+    break;
   }
 }
+
+
+//  print the volume menu on screen (SERIAL ONLY) and 
+//  request for the required operation
 
 void menuCalcularVolumenes()
 {
@@ -54,6 +70,7 @@ void menuCalcularVolumenes()
   writeString("1) Cubo \r\n");
   writeString("2) Cilindro \r\n");
   writeString("3) Esfera\r\n");
+  writeString("Presione cualquier otra tecla para regresar\n");
   writeString("Escriba su opcion: \r\n");
   opcion = readStr().toInt();
   writeString(String(opcion));
@@ -63,11 +80,17 @@ void menuCalcularVolumenes()
     case 1:
       volumenCubo();
     break;
+    
     case 2:
       volumenCilindro();
     break;
+    
     case 3:
       volumenEsfera();
+    break;
+    
+    default:
+      writeString("Regresa al menu principal \n");
     break;
   }
 }

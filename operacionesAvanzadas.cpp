@@ -3,6 +3,7 @@
 
 #define pi_val 3.142F
 
+//function to calculate a square's area
 void areaCuadrado()
 {
   float lado;
@@ -22,6 +23,7 @@ void areaCuadrado()
   writeAnswerToLCD(temp);
 }
 
+//function to calculate a circle's area
 void areaCirculo()
 {
   float radio;
@@ -41,6 +43,7 @@ void areaCirculo()
   writeAnswerToLCD(temp);
 }
 
+//function to calculate a rectangle's area
 void areaRectangulo()
 {
   float lado1, lado2;
@@ -64,7 +67,7 @@ void areaRectangulo()
   writeAnswerToLCD(temp);
 }
 
-
+//function to calculate a cube's volume
 void volumenCubo()
 {
   float lado;
@@ -84,6 +87,7 @@ void volumenCubo()
   writeAnswerToLCD(temp);
 }
 
+//function to calculate a cilinder's volume
 void volumenCilindro()
 {
   float radio;
@@ -111,7 +115,7 @@ void volumenCilindro()
   writeAnswerToLCD(temp);
 }
 
-
+//function to calculate a sphere's volume
 void volumenEsfera()
 {
   float radio;
