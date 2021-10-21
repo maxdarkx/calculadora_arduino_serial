@@ -190,10 +190,21 @@ void raizCuadrada()
   base = readStr().toFloat();
   writeString(String(base) + "\n");
 
-  resultado = sqrt(base);
-
-  writeString("\nEl resultado es: \n");
-  temp = "SQRT ("+String(base)+") = " + String(resultado,2) +"\n\n";
-  writeString(temp);
-  writeAnswerToLCD(temp);
+  if(resultado >= 0)
+  {
+    resultado = sqrt(base);
+    
+  
+    writeString("\nEl resultado es: \n");
+    temp = "SQRT ("+String(base)+") = " + String(resultado,2) +"\n\n";
+    writeString(temp);
+    writeAnswerToLCD(temp);
+  }
+  else
+  {
+    temp = "\nLos numeros complejos no estan permitidos\n\n";
+    writeString(temp);
+    temp = "Complejo";
+    writeStringToLCD(temp);
+  }
 }
